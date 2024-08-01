@@ -44,7 +44,7 @@ export default function AboutSection() {
             Codecademy
           </a>{" "}
           subscription and YouTube videos, I quickly realized that Software
-          Engineering was the thing I'd been looking for in a career.
+          Engineering was the thing I&apos;d been looking for in a career.
         </p>
         <p className="mb-4">
           My main goal right now is to provide as much value as possible to the

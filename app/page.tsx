@@ -16,7 +16,7 @@ export default function Home() {
   const projectRef = useRef(null);
 
   useEffect(() => {
-    window.history.scrollRestoration = 'manual'
+    window.history.scrollRestoration = "manual";
 
     const options = {
       root: null,
