@@ -1,3 +1,5 @@
+import DevProfile from "./ui/dev-profile";
+
 export default function ExperienceSection() {
   return (
     <div
@@ -263,6 +265,9 @@ export default function ExperienceSection() {
             </div>
           </li>
         </ol>
+        <div className="hidden lg:block">
+          <DevProfile />
+        </div>
       </div>
     </div>
   );
