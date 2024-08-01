@@ -1,3 +1,5 @@
+import DevProfileDE from "../ui/dev-profile-de";
+
 export default function ExperienceSectionDE() {
   return (
     <div
@@ -267,6 +269,7 @@ export default function ExperienceSectionDE() {
             </div>
           </li>
         </ol>
+        <DevProfileDE />
       </div>
     </div>
   );
