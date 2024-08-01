@@ -15,7 +15,6 @@ export default function DevProfile() {
           className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
           aria-label="Developer Profile (opens in same tab)"
         >
-          <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
           <span className="inline-block hover:underline">
             Developer Profile
             <svg
@@ -40,12 +39,15 @@ export default function DevProfile() {
             Technologies &amp; Skills
           </DialogTitle>
           <DialogDescription className="text-slate-400">
-            These are some of the technologies/skills I&apos;m currently using, or
-            that I&apos;m proficient in.
+            These are some of the technologies/skills I&apos;m currently using,
+            or that I&apos;m proficient in.
           </DialogDescription>
         </DialogHeader>
         <div>
-          <ul className="mt-2 flex flex-wrap justify-center sm:justify-start" aria-label="Technologies/Skills Used">
+          <ul
+            className="mt-2 flex flex-wrap justify-center sm:justify-start"
+            aria-label="Technologies/Skills Used"
+          >
             <li className="mr-1.5 mt-2">
               <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 ">
                 JavaScript
