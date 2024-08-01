@@ -3,10 +3,10 @@
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 
-export default function Header({ activeSection }: { activeSection: string }) {
+export default function HeaderDE({ activeSection }: { activeSection: string }) {
   const router = useRouter();
 
-  const [language, setLanguage] = useState<string>("en");
+  const [language, setLanguage] = useState<string>("de");
 
   return (
     <header className="lg:fixed lg:top-0 lg:flex lg:min-h-screen lg:w-fit lg:flex-col lg:justify-between lg:py-24">
@@ -15,11 +15,11 @@ export default function Header({ activeSection }: { activeSection: string }) {
           Kaiden Riley
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl pointer-events-none">
-          Frontend Engineer
+          Frontend Entwickler
         </h2>
         <p className="mt-4 max-w-xs leading-normal pointer-events-none">
-          I build pixel perfect, scalable frontend products with a great user
-          experience.
+          Ich entwickle pixelgenaue, skalierbare Frontend-Produkte mit einem
+          großartigen Benutzererlebnis.
         </p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
@@ -39,7 +39,7 @@ export default function Header({ activeSection }: { activeSection: string }) {
                       : "text-slate-500"
                   } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
                 >
-                  About
+                  Über mich
                 </span>
               </a>
             </li>
@@ -59,7 +59,7 @@ export default function Header({ activeSection }: { activeSection: string }) {
                       : "text-slate-500"
                   } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
                 >
-                  Experience
+                  Erfahrung
                 </span>
               </a>
             </li>
@@ -79,7 +79,7 @@ export default function Header({ activeSection }: { activeSection: string }) {
                       : "text-slate-500"
                   } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
                 >
-                  Projects
+                  Projekte
                 </span>
               </a>
             </li>
