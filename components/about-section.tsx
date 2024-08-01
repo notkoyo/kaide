@@ -63,7 +63,7 @@ export default function AboutSection() {
           well under the hood.
         </p>
         <p>
-          When I’m not at my desk, you can find me playing competitive FPS games, trying
+          When I&apos;m not at my desk, you can find me playing competitive FPS games, trying
           new food, hanging out with friends, or working on side projects with
           friends that are studying Computer Science.{" "}
         </p>
