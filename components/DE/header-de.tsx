@@ -157,19 +157,19 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
               router.push("/");
             }}
             className={`${
-              language === "en" ? "text-slate-200 font-semibold" : "text-slate-400"
+              language === "en" ? "text-teal-400 font-semibold" : "text-slate-400"
             } uppercase`}
           >
             en
           </button>
-          <div>/</div>
+          <div className="pointer-events-none">/</div>
           <button
             onClick={() => {
               setLanguage("de");
               router.push("/de");
             }}
             className={`${
-              language === "de" ? "text-slate-200 font-semibold" : "text-slate-400"
+              language === "de" ? "text-teal-400 font-semibold" : "text-slate-400"
             } uppercase`}
           >
             de
