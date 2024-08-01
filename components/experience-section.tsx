@@ -1,3 +1,5 @@
+import DevProfile from "./ui/dev-profile";
+
 export default function ExperienceSection() {
   return (
     <div
@@ -241,8 +243,9 @@ export default function ExperienceSection() {
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  Learn and solidify understanding of fundamentals of responsive web development, including HTML, CSS,
-                  and JavaScript. Certification providied by FreeCodeCamp.
+                  Learn and solidify understanding of fundamentals of responsive
+                  web development, including HTML, CSS, and JavaScript.
+                  Certification providied by FreeCodeCamp.
                 </p>
                 <ul
                   className="mt-2 flex flex-wrap"
@@ -263,6 +266,7 @@ export default function ExperienceSection() {
             </div>
           </li>
         </ol>
+        <DevProfile />
       </div>
     </div>
   );
