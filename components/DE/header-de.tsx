@@ -150,6 +150,30 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
             </svg>
           </a>
         </li>
+        <li className="mr-5 text-xs shrink-0">
+          <a
+            className="block hover:text-teal-300 transition-all duration-300"
+            href="mailto:kaiden@outlook.kr"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Mail Contact (opens in a new tab)"
+            title="Contact Me"
+          >
+            <span className="sr-only">Email</span>
+            <svg
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              viewBox="0 0 24 24"
+              className="h-7 w-7"
+            >
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <path d="M22 6l-10 7L2 6" />
+            </svg>
+          </a>
+        </li>
         <li className="flex flex-row gap-2">
           <button
             onClick={() => {
