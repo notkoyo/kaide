@@ -1,8 +1,14 @@
+import { MutableRefObject } from "react";
 import DevProfileDE from "../ui/dev-profile-de";
 
-export default function ExperienceSectionDE() {
+export default function ExperienceSectionDE({
+  experienceRef,
+}: {
+  experienceRef: MutableRefObject<HTMLDivElement | null>;
+}) {
   return (
-    <div
+    <section
+      ref={experienceRef}
       id="experience"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="Work experience"
@@ -247,8 +253,7 @@ export default function ExperienceSectionDE() {
                 <p className="mt-2 text-sm leading-normal">
                   Lernen und festigen Sie das Verständnis der Grundlagen der
                   responsiven Webentwicklung, einschließlich HTML, CSS und
-                  JavaScript. Die Zertifizierung wird von FreeCodeCamp
-                  erhalten.
+                  JavaScript. Die Zertifizierung wird von FreeCodeCamp erhalten.
                 </p>
                 <ul
                   className="mt-2 flex flex-wrap"
@@ -271,6 +276,6 @@ export default function ExperienceSectionDE() {
         </ol>
         <DevProfileDE />
       </div>
-    </div>
+    </section>
   );
 }

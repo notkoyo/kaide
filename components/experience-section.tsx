@@ -1,8 +1,14 @@
+import { MutableRefObject } from "react";
 import DevProfile from "./ui/dev-profile";
 
-export default function ExperienceSection() {
+export default function ExperienceSection({
+  experienceRef,
+}: {
+  experienceRef: MutableRefObject<HTMLDivElement | null>;
+}) {
   return (
-    <div
+    <section
+      ref={experienceRef}
       id="experience"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="Work experience"
@@ -268,6 +274,6 @@ export default function ExperienceSection() {
         </ol>
         <DevProfile />
       </div>
-    </div>
+    </section>
   );
 }

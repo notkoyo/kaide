@@ -1,6 +1,13 @@
-export default function AboutSection() {
+import type { LegacyRef, MutableRefObject } from "react";
+
+export default function AboutSection({
+  aboutRef,
+}: {
+  aboutRef: MutableRefObject<HTMLDivElement | null>;
+}) {
   return (
-    <div
+    <section
+      ref={aboutRef}
       id="about"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="About me"
@@ -63,11 +70,12 @@ export default function AboutSection() {
           well under the hood.
         </p>
         <p>
-          When I&apos;m not at my desk, you can find me playing competitive FPS games, trying
-          new food, hanging out with friends, or working on side projects with
-          friends that are currently pursuing Computer Science degrees.{" "}
+          When I&apos;m not at my desk, you can find me playing competitive FPS
+          games, trying new food, hanging out with friends, or working on side
+          projects with friends that are currently pursuing Computer Science
+          degrees.{" "}
         </p>
       </div>
-    </div>
+    </section>
   );
 }

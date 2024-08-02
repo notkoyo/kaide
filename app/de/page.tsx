@@ -54,15 +54,9 @@ export default function Home() {
       <div className="lg:flex lg:justify-between lg:gap-4">
         <HeaderDE activeSection={activeSection} />
         <main className="pt-24 lg:w-1/2 lg:py-24 ml-auto">
-          <section ref={aboutRef}>
-            <AboutSectionDE />
-          </section>
-          <section ref={experienceRef}>
-            <ExperienceSectionDE />
-          </section>
-          <section ref={projectRef}>
-            <ProjectSectionDE />
-          </section>
+          <AboutSectionDE aboutRef={aboutRef} />
+          <ExperienceSectionDE experienceRef={experienceRef} />
+          <ProjectSectionDE projectRef={projectRef} />
           <FooterDE />
         </main>
       </div>

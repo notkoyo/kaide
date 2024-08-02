@@ -1,6 +1,13 @@
-export default function AboutSectionDE() {
+import { MutableRefObject } from "react";
+
+export default function AboutSectionDE({
+  aboutRef,
+}: {
+  aboutRef: MutableRefObject<HTMLDivElement | null>;
+}) {
   return (
-    <div
+    <section
+      ref={aboutRef}
       id="about"
       className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24"
       aria-label="About me"
@@ -69,6 +76,6 @@ export default function AboutSectionDE() {
           studieren.{" "}
         </p>
       </div>
-    </div>
+    </section>
   );
 }
