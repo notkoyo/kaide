@@ -72,8 +72,7 @@ export default function AboutSection({
         <p>
           When I&apos;m not at my desk, you can find me playing competitive FPS
           games, trying new food, hanging out with friends, or working on side
-          projects with friends that are currently pursuing Computer Science
-          degrees.{" "}
+          projects with friends that are looking to work in the same field.{" "}
         </p>
       </div>
     </section>

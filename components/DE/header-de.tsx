@@ -1,9 +1,19 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { MutableRefObject, useState } from "react";
 
-export default function HeaderDE({ activeSection }: { activeSection: string }) {
+export default function HeaderDE({
+  activeSection,
+  aboutRef,
+  experienceRef,
+  projectRef,
+}: {
+  activeSection: string;
+  aboutRef: MutableRefObject<HTMLDivElement | null>;
+  experienceRef: MutableRefObject<HTMLDivElement | null>;
+  projectRef: MutableRefObject<HTMLDivElement | null>;
+}) {
   const router = useRouter();
 
   const [language, setLanguage] = useState<string>("de");
@@ -24,7 +34,12 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
             <li>
-              <a className="group flex items-center py-3 active" href="#about">
+              <a
+                className="group flex items-center py-3 active cursor-pointer"
+                onClick={() => {
+                  aboutRef.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <span
                   className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none ${
                     activeSection === "about"
@@ -44,7 +59,12 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
               </a>
             </li>
             <li>
-              <a className="group flex items-center py-3" href="#experience">
+              <a
+                className="group flex items-center py-3 cursor-pointer"
+                onClick={() => {
+                  experienceRef.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <span
                   className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none ${
                     activeSection === "experience"
@@ -64,7 +84,12 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
               </a>
             </li>
             <li>
-              <a className="group flex items-center py-3" href="#projects">
+              <a
+                className="group flex items-center py-3 cursor-pointer"
+                onClick={() => {
+                  projectRef.current?.scrollIntoView({ behavior: "smooth" });
+                }}
+              >
                 <span
                   className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none ${
                     activeSection === "projects"
@@ -181,7 +206,9 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
               router.push("/");
             }}
             className={`${
-              language === "en" ? "text-teal-400 font-semibold" : "text-slate-400"
+              language === "en"
+                ? "text-teal-400 font-semibold"
+                : "text-slate-400"
             } uppercase`}
           >
             en
@@ -193,7 +220,9 @@ export default function HeaderDE({ activeSection }: { activeSection: string }) {
               router.push("/de");
             }}
             className={`${
-              language === "de" ? "text-teal-400 font-semibold" : "text-slate-400"
+              language === "de"
+                ? "text-teal-400 font-semibold"
+                : "text-slate-400"
             } uppercase`}
           >
             de
