@@ -3,35 +3,35 @@ export default [
     projectTitle: "KokoBot",
     projectHref: "https://github.com/notkoyo/koko-bot",
     projectDescription:
-      "Ein Valorant Custom Games Discord Bot zum Erstellen und Verwalten von Custom Game Lobbies. Gebaut mit JavaScript, discord.js und MongoDB.",
+      "Entwicklung eines Valorant-Custom-Games-Discord-Bots zur Erstellung und Verwaltung von benutzerdefinierten Spiel-Lobbies. Entwickelt mit JavaScript, discord.js und MongoDB.",
     projectImage: "/koko-bot.png",
   },
   {
     projectTitle: "Jobi CLI",
     projectHref: "https://github.com/notkoyo/jobi-cli",
     projectDescription:
-      "Jobi ist ein Tool für die Befehlszeilenschnittstelle (CLI), mit dem Sie Ihre Jobanwendungen effizient verwalten können. Mit diesem Tool können Sie alle in einer MongoDB-Datenbank gespeicherten Auftragsanwendungen hinzufügen, aktualisieren, löschen und anzeigen.",
+      "Entwicklung von Jobi, einem Command Line Interface (CLI) Tool zur effizienten Verwaltung von Bewerbungen. Mit diesem Tool können alle in einer MongoDB-Datenbank gespeicherten Bewerbungen hinzugefügt, aktualisiert, gelöscht und angezeigt werden.",
     projectImage: "/jobi-cli.png",
   },
   {
     projectTitle: "NC News",
     projectHref: "https://github.com/notkoyo/ncnews",
     projectDescription:
-      "Front-End-Projekt zur Visualisierung der von der NC News API bereitgestellten Daten. Erstellt mit Next.js, Tailwind CSS und Vercel.",
+      "Entwicklung eines Front-End-Projekts zur Visualisierung der Daten der NC News API. Erstellt mit Next.js, Tailwind CSS und Vercel.",
     projectImage: "/ncnews.png",
   },
   {
     projectTitle: "NC News API v2",
     projectHref: "https://github.com/notkoyo/ncnews-api-v2.0.0",
     projectDescription:
-      "Umfassung von meiner NC News API mit TypeScript und HonoJS mit einer PostgreSQL Datenbank via Neon.",
+      "Neuentwicklung meiner NC News API unter Verwendung von TypeScript und HonoJS mit einer PostgreSQL-Datenbank über Neon.",
     projectImage: "/ncnews-api.png",
   },
   {
     projectTitle: "Congregate",
     projectHref: "https://github.com/notkoyo/congregate",
     projectDescription:
-      "Eine benutzerorientierte Plattform für die Verwaltung und Suche von Veranstaltungen, die mit Next.js und Supabase entwickelt wurde.",
+      "Entwicklung einer benutzerorientierten Plattform zur Verwaltung und Suche von Veranstaltungen, erstellt mit Next.js und Supabase.",
     projectImage: "/congregate.png",
   },
 ] as const;

@@ -19,7 +19,8 @@ export default function AboutSectionDE({
       </div>
       <div>
         <p className="mb-4">
-          Im Jahr 2022 beschloss ich, während meines Deutschstudiums an der{" "}
+          Im Jahr 2022 entschied ich mich, mich intensiv mit Programmierung und
+          Webentwicklung zu beschäftigen, während ich an der{" "}
           <a
             className="font-medium text-slate-200 hover:text-teal-300"
             href="https://www.victoria-hochschule.de/"
@@ -29,8 +30,7 @@ export default function AboutSectionDE({
           >
             VICTORIA Universität
           </a>{" "}
-          in die Programmierung und Webentwicklung einzutauchen. Nachdem ich
-          mich durch zahllose{" "}
+          Deutsch studierte. Nachdem ich zahlreiche Kurse bei{" "}
           <a
             className="font-medium text-slate-200 hover:text-teal-300"
             href="https://www.freecodecamp.org/"
@@ -38,9 +38,9 @@ export default function AboutSectionDE({
             rel="noreferrer noopener"
             aria-label="freeCodeCamp (opens in a new tab)"
           >
-            freeCodeCamp-Kurse
+            FreeCodeCamp
           </a>
-          ,{" "}
+          , ein Abonnement bei{" "}
           <a
             className="font-medium text-slate-200 hover:text-teal-300"
             href="https://www.codecademy.com/"
@@ -48,14 +48,24 @@ export default function AboutSectionDE({
             rel="noreferrer noopener"
             aria-label="Codecademy (opens in a new tab)"
           >
-            Codecademy-Kurse
+            Codecademy
           </a>{" "}
-          und YouTube-Videos gearbeitet hatte, wurde mir schnell klar, dass
-          Software-Engineering genau das ist, wonach ich in meinem Beruf gesucht
-          hatte.{" "}
+          und eine Ausbildung bei{" "}
+          <a
+            className="font-medium text-slate-200 hover:text-teal-300"
+            href="https://www.northcoders.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Codecademy (opens in a new tab)"
+          >
+            Northcoders
+          </a>{" "}
+          absolviert hatte, wurde mir schnell klar, dass Software Engineering
+          die Berufung war, nach der ich gesucht hatte.{" "}
         </p>
         <p className="mb-4">
-          Mein Hauptziel ist es derzeit, dem Unternehmen und unseren Kunden bei{" "}
+          Mein derzeitiges Hauptziel ist es, dem Unternehmen und unseren Kunden
+          bei{" "}
           <a
             className="font-medium text-slate-200 hover:text-teal-300"
             href="https://www.pleo.io/"
@@ -65,15 +75,16 @@ export default function AboutSectionDE({
           >
             Pleo
           </a>{" "}
-          so viel Nutzen wie möglich zu bieten. Ich lerne gerne und bin gerade
-          dabei, mein Wissen zu erweitern, damit alles, was ich baue, so gut wie
-          möglich aussieht, aber auch unter der Haube gut gebaut ist.
+          einen möglichst großen Mehrwert zu bieten. Ich habe eine starke
+          Lernbereitschaft und bin stets bestrebt, mein Wissen zu erweitern, um
+          sicherzustellen, dass alles, was ich entwickle, nicht nur ansprechend
+          aussieht, sondern auch technisch einwandfrei ist.
         </p>
         <p>
-          Wenn ich nicht an meinem Schreibtisch sitze, kann man mich finden
-          FPS-Spielen spielen, neue Gerichte ausprobieren, mit Freunden abhängen
-          oder bei der Arbeit an Nebenprojekten mit Freunden, die Informatik
-          studieren.{" "}
+          In meiner Freizeit beschäftige ich mich gerne mit kompetitiven
+          FPS-Spielen, probiere neue kulinarische Erlebnisse aus, verbringe Zeit
+          mit Freunden oder arbeite an Nebenprojekten, die im gleichen Bereich
+          angesiedelt sind.{" "}
         </p>
       </div>
     </section>

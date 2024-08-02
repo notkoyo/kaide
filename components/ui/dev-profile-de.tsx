@@ -39,8 +39,7 @@ export default function DevProfileDE() {
             Technologien &amp; Fähigkeiten
           </DialogTitle>
           <DialogDescription className="text-slate-400">
-            Dies sind einige der Technologien/Fähigkeiten, die ich derzeit
-            verwende, oder die ich gut beherrsche.
+            Dies sind die Fähigkeiten und Technologien, die ich derzeit täglich benutze.
           </DialogDescription>
         </DialogHeader>
         <div>

@@ -2,14 +2,14 @@ export default function FooterDE() {
   return (
     <footer>
       <p className="text-sm max-w-lg mx-auto lg:mx-0">
-        Von mir selbst in{" "}
+        Alle Projekte wurden von mir eigenständig in{" "}
         <a
           className="text-slate-300 hover:text-teal-300 transition-all duration-300"
           href="https://www.code.visualstudio.com/"
         >
           Visual Studio Code
         </a>{" "}
-        programmiert. Gebaut mit{" "}
+        entwickelt, unter Verwendung von{" "}
         <a
           className="text-slate-300 hover:text-teal-300 transition-all duration-300"
           href="https://www.nextjs.org/"
@@ -23,14 +23,14 @@ export default function FooterDE() {
         >
           Tailwind CSS
         </a>
-        , eingesetzt mit{" "}
+        , und mit{" "}
         <a
           className="text-slate-300 hover:text-teal-300 transition-all duration-300"
           href="https://www.vercel.com/"
         >
-          Vercel
+          Vercel 
         </a>
-        . Der gesamte Text ist mit der Inter-Schriftart gesetzt.
+        {" "}bereitgestellt. Alle Texte sind mit der Schriftart Inter gesetzt.
       </p>
     </footer>
   );

@@ -41,7 +41,7 @@ export default function ExperienceSectionDE({
                     >
                       <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                       <span>
-                        Assoziierter Frontend Entwickler ·{" "}
+                        Associate Frontend Entwickler ·{" "}
                         <span className="inline-block">
                           Pleo
                           <svg
@@ -63,11 +63,10 @@ export default function ExperienceSectionDE({
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  Erstellung und Pflege von Komponenten, die für den Aufbau des
-                  Pleos-Frontends verwendet werden. Arbeiten Sie eng mit
-                  Remote-Teams zusammen, einschließlich Entwicklern, Designern
-                  und Produktmanagern, um bewährte Verfahren für die
-                  Barrierefreiheit im Internet zu implementieren.
+                  Aufbau und Wartung von Komponenten zur Erstellung des
+                  Frontends von Pleo. Enge Zusammenarbeit mit Remote-Teams,
+                  einschließlich Entwicklern, Designern und Produktmanagern, um
+                  Best Practices in der Web-Accessibility zu implementieren.
                 </p>
                 <ul
                   className="mt-2 flex flex-wrap"
@@ -133,7 +132,7 @@ export default function ExperienceSectionDE({
                     >
                       <span className="absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block"></span>
                       <span>
-                        Trainee Fullstack Developer ·{" "}
+                        Trainee Fullstack Entwickler ·{" "}
                         <span className="inline-block">
                           Northcoders
                           <svg
@@ -155,9 +154,9 @@ export default function ExperienceSectionDE({
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  Lernen Sie die Grundlagen der Webentwicklung, einschließlich
-                  HTML, CSS, JavaScript und React. Erstellen Sie Projekte unter
-                  Verwendung von Test Driven Development (TDD) und Paired
+                  Erlernen der Grundlagen der Webentwicklung, einschließlich
+                  HTML, CSS, JavaScript und React. Erstellung von Projekten
+                  unter Anwendung von Test Driven Development (TDD) und Pair
                   Programming.
                 </p>
                 <ul
@@ -251,9 +250,9 @@ export default function ExperienceSectionDE({
                   </div>
                 </h3>
                 <p className="mt-2 text-sm leading-normal">
-                  Lernen und festigen Sie das Verständnis der Grundlagen der
-                  responsiven Webentwicklung, einschließlich HTML, CSS und
-                  JavaScript. Die Zertifizierung wird von FreeCodeCamp erhalten.
+                  Vertiefung des Verständnisses der responsiven Webentwicklung,
+                  einschließlich HTML, CSS und JavaScript. Zertifizierung durch
+                  FreeCodeCamp erhalten.
                 </p>
                 <ul
                   className="mt-2 flex flex-wrap"
