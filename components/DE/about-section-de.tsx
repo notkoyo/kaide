@@ -83,7 +83,7 @@ export default function AboutSectionDE({
         <p>
           In meiner Freizeit beschäftige ich mich gerne mit kompetitiven
           FPS-Spielen, probiere neue kulinarische Erlebnisse aus, verbringe Zeit
-          mit Freunden oder arbeite an Nebenprojekten, die im gleichen Bereich
+          mit Freunden oder arbeite an Nebenprojekten mit Freunden, die im gleichen Bereich
           angesiedelt sind.{" "}
         </p>
       </div>
