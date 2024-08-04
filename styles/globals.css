@@ -13,6 +13,12 @@
   scrollbar-width: none;  /* Firefox */
 }
 
+@layer utilities {
+  .cursor-gradient {
+    background: radial-gradient(circle farthest-side at var(--x) var(--y), #282828 0%, transparent 55%);
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
