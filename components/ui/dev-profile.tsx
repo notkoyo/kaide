@@ -13,10 +13,10 @@ export default function DevProfile() {
       <DialogTrigger>
         <div
           className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-          aria-label="Developer Profile (opens in same tab)"
+          aria-label="Developer Skills (opens in same tab)"
         >
           <span className="inline-block hover:underline">
-            Developer Profile
+            Developer Skills
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
