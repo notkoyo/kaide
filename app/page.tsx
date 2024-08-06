@@ -1,6 +1,7 @@
 "use client";
 
 import {useState, useEffect, useRef} from "react";
+import { motion } from "framer-motion";
 
 import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/experience-section";
@@ -59,12 +60,12 @@ export default function Home() {
           experienceRef={experienceRef}
           projectRef={projectRef}
         />
-        <main className="pt-24 lg:w-1/2 lg:py-24 ml-auto">
+        <motion.main initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, }} className="pt-24 lg:w-1/2 lg:py-24 ml-auto">
           <AboutSection aboutRef={aboutRef} />
           <ExperienceSection experienceRef={experienceRef} />
           <ProjectSection projectRef={projectRef} />
           <Footer />
-        </main>
+        </motion.main>
       </div>
     </div>
   );

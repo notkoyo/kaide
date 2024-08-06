@@ -26,7 +26,7 @@ export default function Footer() {
           href="https://www.vercel.com/"
         >
           Vercel
-        </a>. All text is set with the Inter
+        </a>. All text is set with the Roboto
         typeface.
       </p>
     </footer>

@@ -50,8 +50,18 @@ export default function AboutSection({
           >
             Codecademy
           </a>{" "}
-          subscription and YouTube videos, I quickly realized that Software
-          Engineering was the thing I&apos;d been looking for in a career.
+          subscription and the{" "}
+          <a
+            className="font-medium text-slate-200 hover:text-teal-300"
+            href="https://www.northcoders.com/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="Codecademy (opens in a new tab)"
+          >
+            Northcoders
+          </a>{" "}
+          bootcamp, I quickly realized that Software Engineering was the thing
+          I&apos;d been looking for in a career.
         </p>
         <p className="mb-4">
           My main goal right now is to provide as much value as possible to the

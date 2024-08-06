@@ -2,7 +2,7 @@ export default function FooterDE() {
   return (
     <footer>
       <p className="text-sm max-w-lg mx-auto lg:mx-0">
-        Alle Projekte wurden von mir eigenständig in{" "}
+        Von mir eigenständig in{" "}
         <a
           className="text-slate-300 hover:text-teal-300 transition-all duration-300"
           href="https://www.code.visualstudio.com/"
@@ -30,7 +30,7 @@ export default function FooterDE() {
         >
           Vercel 
         </a>
-        {" "}bereitgestellt. Alle Texte sind mit der Schriftart Inter gesetzt.
+        {" "}bereitgestellt. Alle Texte sind mit der Schriftart Roboto gesetzt.
       </p>
     </footer>
   );
