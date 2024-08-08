@@ -4,20 +4,22 @@ import { useRouter } from "next/navigation";
 import { MutableRefObject, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function HeaderDE({
+export default function Header({
   activeSection,
   aboutRef,
   experienceRef,
   projectRef,
+  language = "en",
 }: {
   activeSection: string;
   aboutRef: MutableRefObject<HTMLDivElement | null>;
   experienceRef: MutableRefObject<HTMLDivElement | null>;
   projectRef: MutableRefObject<HTMLDivElement | null>;
+  language?: "en" | "de";
 }) {
   const router = useRouter();
 
-  const [language, setLanguage] = useState<string>("de");
+  const [textLanguage, setTextLanguage] = useState<string>(language);
 
   return (
     <header className="lg:fixed lg:top-0 lg:flex lg:min-h-screen lg:w-fit lg:flex-col lg:justify-between lg:py-24">
@@ -30,11 +32,12 @@ export default function HeaderDE({
           Kaiden Riley
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl pointer-events-none">
-          Frontend Entwickler
+          {language === "en" ? "Frontend Engineer" : "Frontend Entwickler"}
         </h2>
         <p className="mt-4 max-w-xs leading-normal pointer-events-none">
-          Ich entwickle pixelgenaue, skalierbare Frontend-Produkte mit einem
-          großartigen Benutzererlebnis.
+          {language === "en"
+            ? "I build pixel perfect, scalable frontend products with a great user experience."
+            : "Ich entwickle pixelgenaue, skalierbare Frontend-Produkte mit einem großartigen Benutzererlebnis."}
         </p>
         <nav className="nav hidden lg:block" aria-label="In-page jump links">
           <ul className="mt-16 w-max">
@@ -59,7 +62,7 @@ export default function HeaderDE({
                       : "text-slate-500"
                   } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
                 >
-                  Über mich
+                  {language === "en" ? "About" : "Über mich"}
                 </span>
               </a>
             </li>
@@ -84,7 +87,7 @@ export default function HeaderDE({
                       : "text-slate-500"
                   } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
                 >
-                  Erfahrung
+                  {language === "en" ? "Experience" : "Erfahrung"}
                 </span>
               </a>
             </li>
@@ -109,7 +112,7 @@ export default function HeaderDE({
                       : "text-slate-500"
                   } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
                 >
-                  Projekte
+                  {language === "en" ? "Projects" : "Projekte"}
                 </span>
               </a>
             </li>
@@ -240,11 +243,11 @@ export default function HeaderDE({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
             onClick={() => {
-              setLanguage("en");
+              setTextLanguage("en");
               router.push("/");
             }}
             className={`${
-              language === "en"
+              textLanguage === "en"
                 ? "text-teal-400 font-semibold"
                 : "text-slate-400"
             } uppercase`}
@@ -264,11 +267,11 @@ export default function HeaderDE({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
             onClick={() => {
-              setLanguage("de");
+              setTextLanguage("de");
               router.push("/de");
             }}
             className={`${
-              language === "de"
+              textLanguage === "de"
                 ? "text-teal-400 font-semibold"
                 : "text-slate-400"
             } uppercase`}

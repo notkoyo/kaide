@@ -1,13 +1,13 @@
 "use client";
 
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import AboutSection from "@/app/_components/about-section";
-import ExperienceSection from "@/app/_components/experience-section";
-import Header from "@/app/_components/header";
-import ProjectSection from "@/app/_components/project-section";
-import Footer from "@/app/_components/footer";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
+import AboutSection from "@/components/about-section";
+import ExperienceSection from "@/components/experience-section";
+import ProjectSection from "@/components/project-section";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("about");
@@ -60,7 +60,12 @@ export default function Home() {
           experienceRef={experienceRef}
           projectRef={projectRef}
         />
-        <motion.main initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, }} className="pt-24 lg:w-1/2 lg:py-24 ml-auto">
+        <motion.main
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="pt-24 lg:w-1/2 lg:py-24 ml-auto"
+        >
           <AboutSection aboutRef={aboutRef} />
           <ExperienceSection experienceRef={experienceRef} />
           <ProjectSection projectRef={projectRef} />

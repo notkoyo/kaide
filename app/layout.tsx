@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: "Kaiden Riley",
   description:
     "Kaiden Riley is a software engineer who builds pixel perfect, performant and accessible digital experiences for the web.",
+  icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({

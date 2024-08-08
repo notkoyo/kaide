@@ -7,16 +7,20 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-export default function DevProfile() {
+export default function DevProfile({
+  language = "en",
+}: {
+  language?: "en" | "de";
+}) {
   return (
     <Dialog>
       <DialogTrigger>
         <div
           className="inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-teal-300 focus-visible:text-teal-300  group/link text-base"
-          aria-label="Developer Skills (opens in same tab)"
+          aria-label="{language === 'en' ? 'Developer Skills (opens in same tab)' : 'Entwickler-Fähigkeiten (opens in same tab)'}"
         >
           <span className="inline-block hover:underline">
-            Developer Skills
+            {language === "en" ? "Developer Skills" : "Entwickler-Fähigkeiten"}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -36,11 +40,14 @@ export default function DevProfile() {
       <DialogContent className="bg-[#191815] border-[#191815]/80">
         <DialogHeader>
           <DialogTitle className="text-slate-200">
-            Technologies &amp; Skills
+            {language === "en"
+              ? "Technologies and Skills"
+              : "Technologien und Fähigkeiten"}
           </DialogTitle>
           <DialogDescription className="text-slate-400">
-            These are some of the technologies/skills I&apos;m currently using,
-            or that I&apos;m proficient in.
+            {language === "en"
+              ? "These are some of the technologies/skills I'm currently using, or that I'm proficient in."
+              : "Dies sind die Fähigkeiten und Technologien, die ich derzeit täglich benutze."}
           </DialogDescription>
         </DialogHeader>
         <div>

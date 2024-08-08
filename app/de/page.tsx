@@ -3,11 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import HeaderDE from "@/app/de/_components/header-de";
-import AboutSectionDE from "@/app/de/_components/about-section-de";
-import ExperienceSectionDE from "@/app/de/_components/experience-section-de";
-import ProjectSectionDE from "@/app/de/_components/project-section-de";
-import FooterDE from "@/app/de/_components/footer-de";
+import Header from "@/components/header";
+import AboutSection from "@/components/about-section";
+import ExperienceSection from "@/components/experience-section";
+import ProjectSection from "@/components/project-section";
+import Footer from "@/components/footer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("about");
@@ -53,11 +53,12 @@ export default function Home() {
   return (
     <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 overflow-hidden">
       <div className="lg:flex lg:justify-between lg:gap-4">
-        <HeaderDE
+        <Header
           activeSection={activeSection}
           aboutRef={aboutRef}
           experienceRef={experienceRef}
           projectRef={projectRef}
+          language="de"
         />
         <motion.main
           initial={{ opacity: 0, y: 30 }}
@@ -65,10 +66,10 @@ export default function Home() {
           transition={{ duration: 0.7 }}
           className="pt-24 lg:w-1/2 lg:py-24 ml-auto"
         >
-          <AboutSectionDE aboutRef={aboutRef} />
-          <ExperienceSectionDE experienceRef={experienceRef} />
-          <ProjectSectionDE projectRef={projectRef} />
-          <FooterDE />
+          <AboutSection aboutRef={aboutRef} language="de" />
+          <ExperienceSection experienceRef={experienceRef} language="de" />
+          <ProjectSection projectRef={projectRef} language="de" />
+          <Footer language="de" />
         </motion.main>
       </div>
     </div>
