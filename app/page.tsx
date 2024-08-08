@@ -8,7 +8,6 @@ import Footer from "@/components/footer";
 import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/experience-section";
 import ProjectSection from "@/components/project-section";
-import exp from "constants";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("about");
