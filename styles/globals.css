@@ -2,17 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .example::-webkit-scrollbar {
   display: none;
 }
-
 /* Hide scrollbar for IE, Edge and Firefox */
 .example {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
 
+@layer components {
+  .section-header {
+    @apply sticky top-0 z-20 -mx-6 mb-4 w-screen px-6 py-5 md:-mx-12 md:px-12 lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0
+  }
+}
 @layer utilities {
   .cursor-gradient {
     background: radial-gradient(circle farthest-side at var(--x) var(--y), #282828 0%, transparent 55%);
@@ -85,6 +93,3 @@
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}

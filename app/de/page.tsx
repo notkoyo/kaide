@@ -3,11 +3,11 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-import HeaderDE from "@/components/DE/header-de";
-import AboutSectionDE from "@/components/DE/about-section-de";
-import ExperienceSectionDE from "@/components/DE/experience-section-de";
-import ProjectSectionDE from "@/components/DE/project-section-de";
-import FooterDE from "@/components/DE/footer-de";
+import HeaderDE from "@/app/de/_components/header-de";
+import AboutSectionDE from "@/app/de/_components/about-section-de";
+import ExperienceSectionDE from "@/app/de/_components/experience-section-de";
+import ProjectSectionDE from "@/app/de/_components/project-section-de";
+import FooterDE from "@/app/de/_components/footer-de";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("about");

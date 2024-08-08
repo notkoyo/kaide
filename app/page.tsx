@@ -3,11 +3,11 @@
 import {useState, useEffect, useRef} from "react";
 import { motion } from "framer-motion";
 
-import AboutSection from "@/components/about-section";
-import ExperienceSection from "@/components/experience-section";
-import Header from "@/components/header";
-import ProjectSection from "@/components/project-section";
-import Footer from "@/components/footer";
+import AboutSection from "@/app/_components/about-section";
+import ExperienceSection from "@/app/_components/experience-section";
+import Header from "@/app/_components/header";
+import ProjectSection from "@/app/_components/project-section";
+import Footer from "@/app/_components/footer";
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState<string>("about");
