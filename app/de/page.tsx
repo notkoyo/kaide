@@ -19,6 +19,10 @@ export default function Home() {
   useEffect(() => {
     window.history.scrollRestoration = "manual";
 
+    let aboutRefValue = null;
+    let experienceRefValue = null;
+    let projectRefValue = null;
+
     const options = {
       root: null,
       rootMargin: "0px",
@@ -39,14 +43,23 @@ export default function Home() {
       });
     }, options);
 
-    if (aboutRef.current) observer.observe(aboutRef.current);
-    if (experienceRef.current) observer.observe(experienceRef.current);
-    if (projectRef.current) observer.observe(projectRef.current);
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+      aboutRefValue = aboutRef.current;
+    }
+    if (experienceRef.current) {
+      observer.observe(experienceRef.current);
+      experienceRefValue = experienceRef.current;
+    }
+    if (projectRef.current) {
+      observer.observe(projectRef.current);
+      projectRefValue = projectRef.current;
+    }
 
     return () => {
-      if (aboutRef.current) observer.unobserve(aboutRef.current);
-      if (experienceRef.current) observer.unobserve(experienceRef.current);
-      if (projectRef.current) observer.unobserve(projectRef.current);
+      if (aboutRefValue) observer.unobserve(aboutRefValue);
+      if (experienceRefValue) observer.unobserve(experienceRefValue);
+      if (projectRefValue) observer.unobserve(projectRefValue);
     };
   }, []);
 
