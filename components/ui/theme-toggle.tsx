@@ -1,7 +1,7 @@
 export default function ThemeToggle({
   theme = "dark",
 }: {
-  theme: "light" | "dark";
+  theme?: "light" | "dark";
 }) {
   return (
     <li className="flex flex-row gap-2 ml-5" title="Theme">
