@@ -11,7 +11,7 @@ export default function LanguageButton({
   const router = useRouter();
 
   return (
-    <li className="flex flex-row gap-2" title="Language">
+    <li className="flex flex-row gap-2 mr-5" title="Language">
       <motion.button
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -23,7 +23,6 @@ export default function LanguageButton({
       >
         {language === "en" ? "de" : "en"}
       </motion.button>
-      <span className="text-transparent">.</span>
     </li>
   );
 }

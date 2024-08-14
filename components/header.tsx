@@ -3,6 +3,7 @@
 import type { MutableRefObject } from "react";
 import { motion } from "framer-motion";
 import LanguageButton from "./ui/language-button";
+import ThemeToggle from "./ui/theme-toggle";
 
 export default function Header({
   activeSection,
@@ -115,7 +116,7 @@ export default function Header({
           </ul>
         </nav>
       </motion.div>
-      <ul className="ml-1 mt-8 flex items-center" aria-label="Social media">
+      <ul className="ml-1 mt-8 flex flex-row items-center" aria-label="Social media">
         <motion.li
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -234,6 +235,7 @@ export default function Header({
           </a>
         </motion.li>
         <LanguageButton language={language} />
+        <ThemeToggle />
       </ul>
     </header>
   );
