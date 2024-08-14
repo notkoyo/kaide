@@ -8,7 +8,7 @@ export default function ThemeToggle({
 }: {
   language?: "en" | "de";
 }) {
-  const [theme, setTheme] = useState<"dark" | "light">("dark");
+  const [theme, setTheme] = useState<string>("dark");
 
   const themeText =
     language === "en"
@@ -28,7 +28,10 @@ export default function ThemeToggle({
       title="Theme"
     >
       <button
-        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        onClick={() => {
+          setTheme(theme === "dark" ? "light" : "dark");
+          document.documentElement.classList.toggle("dark");
+        }}
         className="font-semibold uppercase text-slate-400 hover:text-teal-400 transition-colors duration-300"
       >
         {themeText}

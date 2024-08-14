@@ -24,7 +24,7 @@ export default function GradientCursor() {
   
   return (
     <div className="w-screen h-screen fixed top-0 left-0 -z-[1] hidden md:block">
-      <div ref={cursorRef} className="cursor-gradient w-screen h-screen absolute top-0 left-0 -z-[1]" />
+      <div ref={cursorRef} className="cursor-gradient-light dark:cursor-gradient-dark w-screen h-screen absolute top-0 left-0 -z-[1]" />
     </div>
   )
 }

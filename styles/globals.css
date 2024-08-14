@@ -22,8 +22,11 @@ html {
   }
 }
 @layer utilities {
-  .cursor-gradient {
+  .cursor-gradient-dark {
     background: radial-gradient(circle farthest-side at var(--x) var(--y), #282828 0%, transparent 55%);
+  }
+  .cursor-gradient-light {
+    background: radial-gradient(circle farthest-side at var(--x) var(--y), #ffffff 0%, transparent 55%);
   }
 }
 
