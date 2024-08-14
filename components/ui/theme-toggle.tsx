@@ -1,11 +1,38 @@
+"use client";
+
+import { motion } from "framer-motion";
+import { useState } from "react";
+
 export default function ThemeToggle({
-  theme = "dark",
+  language = "en",
 }: {
-  theme?: "light" | "dark";
+  language?: "en" | "de";
 }) {
+  const [theme, setTheme] = useState<"dark" | "light">("dark");
+
+  const themeText =
+    language === "en"
+      ? theme === "dark"
+        ? "light"
+        : "dark"
+      : theme === "dark"
+      ? "hell"
+      : "dunkel";
+
   return (
-    <li className="flex flex-row gap-2 ml-5" title="Theme">
-      <button className="font-semibold uppercase text-slate-400 hover:text-teal-400">{theme === "light" ? "dark" : "light"}</button>
-    </li>
+    <motion.li
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.7, delay: 0.3 }}
+      className="flex flex-row gap-2"
+      title="Theme"
+    >
+      <button
+        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+        className="font-semibold uppercase text-slate-400 hover:text-teal-400 transition-colors duration-300"
+      >
+        {themeText}
+      </button>
+    </motion.li>
   );
 }

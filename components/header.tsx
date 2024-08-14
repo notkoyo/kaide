@@ -235,7 +235,7 @@ export default function Header({
           </a>
         </motion.li>
         <LanguageButton language={language} />
-        <ThemeToggle />
+        <ThemeToggle language={language} />
       </ul>
     </header>
   );
