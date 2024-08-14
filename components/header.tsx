@@ -1,8 +1,8 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { MutableRefObject, useState } from "react";
+import type { MutableRefObject } from "react";
 import { motion } from "framer-motion";
+import LanguageButton from "./ui/language-button";
 
 export default function Header({
   activeSection,
@@ -17,10 +17,6 @@ export default function Header({
   projectRef: MutableRefObject<HTMLDivElement | null>;
   language?: "en" | "de";
 }) {
-  const router = useRouter();
-
-  const [textLanguage, setTextLanguage] = useState<string>(language);
-
   return (
     <header className="lg:fixed lg:top-0 lg:flex lg:min-h-screen lg:w-fit lg:flex-col lg:justify-between lg:py-24">
       <motion.div
@@ -237,49 +233,7 @@ export default function Header({
             </svg>
           </a>
         </motion.li>
-        <li className="flex flex-row gap-2">
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
-            onClick={() => {
-              setTextLanguage("en");
-              router.push("/");
-            }}
-            className={`${
-              textLanguage === "en"
-                ? "text-teal-400 font-semibold"
-                : "text-slate-400"
-            } uppercase`}
-          >
-            en
-          </motion.button>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.275 }}
-            className="pointer-events-none"
-          >
-            /
-          </motion.div>
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            onClick={() => {
-              setTextLanguage("de");
-              router.push("/de");
-            }}
-            className={`${
-              textLanguage === "de"
-                ? "text-teal-400 font-semibold"
-                : "text-slate-400"
-            } uppercase`}
-          >
-            de
-          </motion.button>
-          <div className="text-transparent">.</div>
-        </li>
+        <LanguageButton language={language} />
       </ul>
     </header>
   );
