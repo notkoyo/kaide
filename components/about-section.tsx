@@ -15,17 +15,17 @@ export default function AboutSection({
       aria-label={language === "en" ? "About me" : "Über mich"}
     >
       <div className="section-header">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-950 dark:text-slate-200 lg:sr-only">
           {language === "en" ? "About" : "Über mich"}
         </h2>
       </div>
       {language === "en" ? (
-        <div>
+        <div className="text-slate-950 dark:text-slate-400">
           <p className="mb-4">
             In 2022, I decided to dive into programming and web development
             while studying German at{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.victoria-hochschule.de/"
               target="_blank"
               rel="noreferrer noopener"
@@ -35,7 +35,7 @@ export default function AboutSection({
             </a>
             . After working my way through countless{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.freecodecamp.org/"
               target="_blank"
               rel="noreferrer noopener"
@@ -45,7 +45,7 @@ export default function AboutSection({
             </a>{" "}
             courses, a{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.codecademy.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -55,7 +55,7 @@ export default function AboutSection({
             </a>{" "}
             subscription and the{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.northcoders.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -70,7 +70,7 @@ export default function AboutSection({
             My main goal right now is to provide as much value as possible to
             the company and for our customers at{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.pleo.io/"
               target="_blank"
               rel="noreferrer noopener"
@@ -90,12 +90,12 @@ export default function AboutSection({
           </p>
         </div>
       ) : (
-        <div>
+        <div className="text-slate-950 dark:text-slate-400">
           <p className="mb-4">
             Im Jahr 2022 entschied ich mich, mich intensiv mit Programmierung
             und Webentwicklung zu beschäftigen, während ich an der{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.victoria-hochschule.de/"
               target="_blank"
               rel="noreferrer noopener"
@@ -105,7 +105,7 @@ export default function AboutSection({
             </a>{" "}
             Deutsch studierte. Nachdem ich zahlreiche Kurse bei{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.freecodecamp.org/"
               target="_blank"
               rel="noreferrer noopener"
@@ -115,7 +115,7 @@ export default function AboutSection({
             </a>
             , ein Abonnement bei{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.codecademy.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -125,7 +125,7 @@ export default function AboutSection({
             </a>{" "}
             und eine Ausbildung bei{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.northcoders.com/"
               target="_blank"
               rel="noreferrer noopener"
@@ -140,7 +140,7 @@ export default function AboutSection({
             Mein derzeitiges Hauptziel ist es, dem Unternehmen und unseren
             Kunden bei{" "}
             <a
-              className="font-medium text-slate-200 hover:text-teal-300"
+              className="font-semibold text-gray-800 hover:text-slate-300 dark:text-slate-200 dark:hover:text-teal-300"
               href="https://www.pleo.io/"
               target="_blank"
               rel="noreferrer noopener"

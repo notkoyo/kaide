@@ -35,7 +35,7 @@ export default function ThemeToggle({
             ? document.documentElement.classList.remove("dark")
             : document.documentElement.classList.add("dark");
         }}
-        className="font-semibold uppercase text-slate-400 hover:text-teal-400 transition-colors duration-300"
+        className="font-semibold uppercase text-slate-950 hover:text-slate-400 dark:text-slate-400 dark:hover:text-teal-400 transition-colors duration-300"
       >
         {themeText}
       </button>

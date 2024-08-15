@@ -19,7 +19,7 @@ export default function LanguageButton({
         onClick={() => {
           language === "en" ? router.push("/de") : router.push("/");
         }}
-        className={`text-slate-400 hover:text-teal-400 font-semibold uppercase transition-colors duration-300`}
+        className={`text-slate-950 hover:text-slate-400 dark:text-slate-400 dark:hover:text-teal-400 font-semibold uppercase transition-colors duration-300`}
       >
         {language === "en" ? "de" : "en"}
       </motion.button>

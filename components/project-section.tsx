@@ -17,7 +17,7 @@ export default function ProjectSection({
       aria-label={language === "en" ? "Projects" : "Projekte"}
     >
       <div className="section-header">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only">
+        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-950 dark:text-slate-200 lg:sr-only">
           {language === "en" ? "Projects" : "Projekte"}
         </h2>
       </div>

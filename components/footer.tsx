@@ -4,33 +4,33 @@ export default function Footer({
   language?: "en" | "de";
 }) {
   return (
-    <footer>
+    <footer className="text-slate-950 dark:text-slate-400">
       {language === "en" ? (
         <p className="text-sm max-w-lg mx-auto lg:mx-0">
           Coded in{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.code.visualstudio.com/"
           >
             Visual Studio Code
           </a>{" "}
           by myself. Built with{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.nextjs.org/"
           >
             Next.js
           </a>{" "}
           and{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.tailwindcss.com/"
           >
             Tailwind CSS
           </a>
           , deployed with{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.vercel.com/"
           >
             Vercel
@@ -41,28 +41,28 @@ export default function Footer({
         <p className="text-sm max-w-lg mx-auto lg:mx-0">
           Von mir eigenständig in{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.code.visualstudio.com/"
           >
             Visual Studio Code
           </a>{" "}
           entwickelt, unter Verwendung von{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.nextjs.org/"
           >
             Next.js
           </a>{" "}
           und{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.tailwindcss.com/"
           >
             Tailwind CSS
           </a>
           , und mit{" "}
           <a
-            className="text-slate-300 hover:text-teal-300 transition-all duration-300"
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.vercel.com/"
           >
             Vercel
