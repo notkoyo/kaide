@@ -8,7 +8,7 @@ export default function ThemeToggle({
 }: {
   language?: "en" | "de";
 }) {
-  const [theme, setTheme] = useState<string>("dark");
+  const [theme, setTheme] = useState<string>(localStorage.getItem("theme") || "dark");
 
   const themeText =
     language === "en"
@@ -29,8 +29,11 @@ export default function ThemeToggle({
     >
       <button
         onClick={() => {
-          setTheme(theme === "dark" ? "light" : "dark");
-          document.documentElement.classList.toggle("dark");
+          setTheme(theme === "light" ? "dark" : "light");
+          localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+          theme === "dark"
+            ? document.documentElement.classList.remove("dark")
+            : document.documentElement.classList.add("dark");
         }}
         className="font-semibold uppercase text-slate-400 hover:text-teal-400 transition-colors duration-300"
       >

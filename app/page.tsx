@@ -10,6 +10,12 @@ import ExperienceSection from "@/components/experience-section";
 import ProjectSection from "@/components/project-section";
 
 export default function Home() {
+  const savedTheme: string = localStorage.getItem("theme") || "dark";
+
+  if (!savedTheme) {
+    localStorage.setItem("theme", "dark");
+  }
+
   const [activeSection, setActiveSection] = useState<string>("about");
 
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -18,6 +24,8 @@ export default function Home() {
 
   useEffect(() => {
     window.history.scrollRestoration = "manual";
+
+    savedTheme === "dark" ? document.documentElement.classList.add("dark") : document.documentElement.classList.remove("dark");
 
     let aboutRefValue = null;
     let experienceRefValue = null;

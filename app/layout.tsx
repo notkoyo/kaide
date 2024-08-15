@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
         className={`${roboto.className} bg-white/80 dark:bg-[#191815] leading-relaxed text-slate-400 antialiased selection:bg-teal-300 selection:text-teal-900`}
       >

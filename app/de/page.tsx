@@ -10,6 +10,8 @@ import ProjectSection from "@/components/project-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
+  const savedTheme: string = localStorage.getItem("theme") || "dark";
+
   const [activeSection, setActiveSection] = useState<string>("about");
 
   const aboutRef = useRef(null);
@@ -18,6 +20,10 @@ export default function Home() {
 
   useEffect(() => {
     window.history.scrollRestoration = "manual";
+
+    savedTheme === "dark"
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
 
     let aboutRefValue = null;
     let experienceRefValue = null;
