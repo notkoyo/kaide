@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
+import Lenis from "lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -9,7 +12,19 @@ import AboutSection from "@/components/about-section";
 import ExperienceSection from "@/components/experience-section";
 import ProjectSection from "@/components/project-section";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Home() {
+  const lenis = new Lenis();
+
+  lenis.on("scroll", ScrollTrigger.update);
+
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
+
+  gsap.ticker.lagSmoothing(0);
+
   const [activeSection, setActiveSection] = useState<string>("about");
 
   const aboutRef = useRef<HTMLDivElement>(null);
