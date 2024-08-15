@@ -1,19 +1,25 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function ThemeToggle({
   language = "en",
 }: {
   language?: "en" | "de";
 }) {
-  const [theme, setTheme] = useState<string>(
-    localStorage.getItem("theme") || "dark"
-  );
+  const [theme, setTheme] = useState<string>("dark");
 
   useEffect(() => {
-    if (window === undefined) setTheme("dark");
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        setTheme(savedTheme);
+        if (savedTheme === "dark") {
+          document.documentElement.classList.add("dark");
+        }
+      }
+    }
   }, []);
 
   const themeText =
@@ -25,6 +31,17 @@ export default function ThemeToggle({
       ? "hell"
       : "dunkel";
 
+  const handleThemeToggle = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+    if (newTheme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
   return (
     <motion.li
       initial={{ opacity: 0, y: 20 }}
@@ -34,17 +51,7 @@ export default function ThemeToggle({
       title="Theme"
     >
       <button
-        onClick={() => {
-          if (window !== undefined) {
-            setTheme(theme === "light" ? "dark" : "light");
-            localStorage.setItem("theme", theme === "light" ? "dark" : "light");
-            theme === "dark"
-              ? document.documentElement.classList.remove("dark")
-              : document.documentElement.classList.add("dark");
-          } else {
-            setTheme("dark");
-          }
-        }}
+        onClick={handleThemeToggle}
         className="font-semibold uppercase text-slate-950 hover:text-slate-400 dark:text-slate-400 dark:hover:text-teal-400 transition-colors duration-300"
       >
         {themeText}
