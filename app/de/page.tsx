@@ -10,7 +10,7 @@ import ProjectSection from "@/components/project-section";
 import Footer from "@/components/footer";
 
 export default function Home() {
-  const savedTheme: string = localStorage.getItem("theme") || "dark";
+  const savedTheme: string = window !== undefined ? localStorage.getItem("theme") || "dark" : "dark";
 
   const [activeSection, setActiveSection] = useState<string>("about");
 

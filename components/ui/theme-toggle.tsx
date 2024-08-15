@@ -1,14 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function ThemeToggle({
   language = "en",
 }: {
   language?: "en" | "de";
 }) {
-  const [theme, setTheme] = useState<string>(localStorage.getItem("theme") || "dark");
+  const [theme, setTheme] = useState<string>(
+    localStorage.getItem("theme") || "dark"
+  );
+
+  useEffect(() => {
+    if (window === undefined) setTheme("dark");
+  }, []);
 
   const themeText =
     language === "en"
@@ -29,11 +35,15 @@ export default function ThemeToggle({
     >
       <button
         onClick={() => {
-          setTheme(theme === "light" ? "dark" : "light");
-          localStorage.setItem("theme", theme === "light" ? "dark" : "light");
-          theme === "dark"
-            ? document.documentElement.classList.remove("dark")
-            : document.documentElement.classList.add("dark");
+          if (window !== undefined) {
+            setTheme(theme === "light" ? "dark" : "light");
+            localStorage.setItem("theme", theme === "light" ? "dark" : "light");
+            theme === "dark"
+              ? document.documentElement.classList.remove("dark")
+              : document.documentElement.classList.add("dark");
+          } else {
+            setTheme("dark");
+          }
         }}
         className="font-semibold uppercase text-slate-950 hover:text-slate-400 dark:text-slate-400 dark:hover:text-teal-400 transition-colors duration-300"
       >

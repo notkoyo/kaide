@@ -10,7 +10,7 @@ import ExperienceSection from "@/components/experience-section";
 import ProjectSection from "@/components/project-section";
 
 export default function Home() {
-  const savedTheme: string = localStorage.getItem("theme") || "dark";
+  const savedTheme: string = window !== undefined ? localStorage.getItem("theme") || "dark" : "dark";
 
   if (!savedTheme) {
     localStorage.setItem("theme", "dark");
