@@ -19,6 +19,16 @@ export default function Home() {
   useEffect(() => {
     window.history.scrollRestoration = "manual";
 
+    const savedTheme: string = localStorage.getItem("theme") || "dark";
+
+    if (!savedTheme) {
+      localStorage.setItem("theme", "dark");
+    }
+
+    savedTheme === "dark"
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
+
     let aboutRefValue = null;
     let experienceRefValue = null;
     let projectRefValue = null;

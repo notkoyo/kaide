@@ -19,6 +19,16 @@ export default function Home() {
   useEffect(() => {
     window.history.scrollRestoration = "manual";
 
+    const savedTheme: string = localStorage.getItem("theme") || "dark";
+
+    if (!savedTheme) {
+      localStorage.setItem("theme", "dark");
+    }
+
+    savedTheme === "dark"
+      ? document.documentElement.classList.add("dark")
+      : document.documentElement.classList.remove("dark");
+
     let aboutRefValue = null;
     let experienceRefValue = null;
     let projectRefValue = null;
@@ -65,7 +75,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-[radial-gradient(circle_farthest_side_at_var(--x)_var(--y), #5eead4_0.5, #5eead4_1)] mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 overflow-hidden">
+    <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 md:px-12 md:py-20 lg:px-24 lg:py-0 overflow-hidden">
       <div className="lg:flex lg:justify-between lg:gap-4">
         <Header
           activeSection={activeSection}

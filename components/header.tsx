@@ -25,13 +25,13 @@ export default function Header({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7 }}
       >
-        <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl pointer-events-none">
+        <h1 className="text-4xl font-bold tracking-tight text-slate-950 dark:text-slate-200 sm:text-5xl pointer-events-none">
           Kaiden Riley
         </h1>
-        <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl pointer-events-none">
+        <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-700 dark:text-slate-200 sm:text-xl pointer-events-none">
           {language === "en" ? "Frontend Engineer" : "Frontend Entwickler"}
         </h2>
-        <p className="mt-4 max-w-xs leading-normal pointer-events-none">
+        <p className="mt-4 max-w-xs leading-normal pointer-events-none text-slate-950/70 dark:text-slate-400">
           {language === "en"
             ? "I build pixel perfect, scalable frontend products with a great user experience."
             : "Ich entwickle pixelgenaue, skalierbare Frontend-Produkte mit einem großartigen Benutzererlebnis."}
@@ -46,18 +46,18 @@ export default function Header({
                 }}
               >
                 <span
-                  className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none ${
+                  className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-950 dark:group-hover:bg-slate-200 motion-reduce:transition-none ${
                     activeSection === "about"
-                      ? "w-16 bg-slate-200"
-                      : "w-8 bg-slate-600"
+                      ? "w-16 bg-slate-950 dark:bg-slate-200"
+                      : "w-8 bg-slate-600/50"
                   }`}
                 ></span>
                 <span
                   className={`${
                     activeSection === "about"
-                      ? "text-slate-200"
-                      : "text-slate-500"
-                  } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
+                      ? "text-slate-950 dark:text-slate-200"
+                      : "text-slate-500/50"
+                  } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-950 dark:group-hover:text-slate-200`}
                 >
                   {language === "en" ? "About" : "Über mich"}
                 </span>
@@ -71,18 +71,18 @@ export default function Header({
                 }}
               >
                 <span
-                  className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none ${
+                  className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-950 dark:group-hover:bg-slate-200 motion-reduce:transition-none ${
                     activeSection === "experience"
-                      ? "w-16 bg-slate-200"
-                      : "w-8 bg-slate-600"
+                      ? "w-16 bg-slate-950 dark:bg-slate-200"
+                      : "w-8 bg-slate-600/50"
                   }`}
                 ></span>
                 <span
                   className={`${
                     activeSection === "experience"
-                      ? "text-slate-200"
-                      : "text-slate-500"
-                  } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
+                      ? "text-slate-950 dark:text-slate-200"
+                      : "text-slate-500/50"
+                  } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-950 dark:group-hover:text-slate-200`}
                 >
                   {language === "en" ? "Experience" : "Erfahrung"}
                 </span>
@@ -96,18 +96,18 @@ export default function Header({
                 }}
               >
                 <span
-                  className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-200 motion-reduce:transition-none ${
+                  className={`mr-4 h-px transition-all group-hover:w-16 group-hover:bg-slate-950 dark:group-hover:bg-slate-200 motion-reduce:transition-none ${
                     activeSection === "projects"
-                      ? "w-16 bg-slate-200"
-                      : "w-8 bg-slate-600"
+                      ? "w-16 bg-slate-950 dark:bg-slate-200"
+                      : "w-8 bg-slate-600/50"
                   }`}
                 ></span>
                 <span
                   className={`${
                     activeSection === "projects"
-                      ? "text-slate-200"
-                      : "text-slate-500"
-                  } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-200`}
+                      ? "text-slate-950 dark:text-slate-200"
+                      : "text-slate-500/50"
+                  } nav-text text-xs font-bold uppercase tracking-widest group-hover:text-slate-950 dark:group-hover:text-slate-200`}
                 >
                   {language === "en" ? "Projects" : "Projekte"}
                 </span>
@@ -124,7 +124,7 @@ export default function Header({
           className="mr-5 text-xs shrink-0"
         >
           <a
-            className="block hover:text-teal-300 transition-all duration-300"
+            className="block text-slate-950 hover:text-slate-500/80 dark:text-slate-400 dark:hover:text-teal-300 transition-all duration-300"
             href="https://github.com/notkoyo"
             target="_blank"
             rel="noreferrer noopener"
@@ -150,7 +150,7 @@ export default function Header({
           className="mr-5 text-xs shrink-0"
         >
           <a
-            className="block hover:text-teal-300 transition-all duration-300"
+            className="block text-slate-950 hover:text-slate-500/80 dark:text-slate-400 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.linkedin.com/in/kaiden-riley/"
             target="_blank"
             rel="noreferrer noopener"
@@ -180,7 +180,7 @@ export default function Header({
           className="mr-5 text-xs shrink-0"
         >
           <a
-            className="block hover:text-teal-300 transition-all duration-300"
+            className="block text-slate-950 hover:text-slate-500/80 dark:text-slate-400 dark:hover:text-teal-300 transition-all duration-300"
             href="https://instagram.com/kaidn424"
             target="_blank"
             rel="noreferrer noopener"
@@ -212,7 +212,7 @@ export default function Header({
           className="mr-5 text-xs shrink-0"
         >
           <a
-            className="block hover:text-teal-300 transition-all duration-300"
+            className="block text-slate-950 hover:text-slate-500/80 dark:text-slate-400 dark:hover:text-teal-300 transition-all duration-300"
             href="mailto:kaiden@outlook.kr"
             target="_blank"
             rel="noreferrer noopener"
@@ -235,7 +235,7 @@ export default function Header({
           </a>
         </motion.li>
         <LanguageButton language={language} />
-        <ThemeToggle />
+        <ThemeToggle language={language} />
       </ul>
     </header>
   );
