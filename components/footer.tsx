@@ -19,14 +19,20 @@ export default function Footer({
             className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.nextjs.org/"
           >
-            Next.js
+            Next.js,
           </a>{" "}
-          and{" "}
           <a
             className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.tailwindcss.com/"
           >
-            Tailwind CSS
+            Tailwind CSS{" "}
+          </a>
+          and{" "}
+          <a
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
+            href="https://gsap.com/"
+          >
+            GSAP
           </a>
           , deployed with{" "}
           <a
@@ -51,14 +57,20 @@ export default function Footer({
             className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.nextjs.org/"
           >
-            Next.js
+            Next.js,
           </a>{" "}
-          und{" "}
           <a
             className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
             href="https://www.tailwindcss.com/"
           >
-            Tailwind CSS
+            Tailwind CSS{" "}
+          </a>
+          und{" "}
+          <a
+            className="text-slate-500 hover:text-slate-400 dark:text-slate-300 dark:hover:text-teal-300 transition-all duration-300"
+            href="https://gsap.com/"
+          >
+            GSAP
           </a>
           , und mit{" "}
           <a
