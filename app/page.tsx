@@ -15,17 +15,13 @@ import ProjectSection from "@/components/project-section";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const lenis = new Lenis();
-
-  lenis.on("scroll", ScrollTrigger.update);
-
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-
-  gsap.ticker.lagSmoothing(0);
-
   const [activeSection, setActiveSection] = useState<string>("about");
+
+  const sections = [
+    { id: "about", start: "top 10%", end: "bottom 30%" },
+    { id: "experience", start: "top 20%", end: "bottom 60%" },
+    { id: "projects", start: "top 40%", end: "bottom 30%" },
+  ];
 
   const aboutRef = useRef<HTMLDivElement>(null);
   const experienceRef = useRef<HTMLDivElement>(null);
@@ -44,48 +40,29 @@ export default function Home() {
       ? document.documentElement.classList.add("dark")
       : document.documentElement.classList.remove("dark");
 
-    let aboutRefValue = null;
-    let experienceRefValue = null;
-    let projectRefValue = null;
+    const lenis = new Lenis();
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            if (entry.target === aboutRef.current) {
-              setActiveSection("about");
-            } else if (entry.target === experienceRef.current) {
-              setActiveSection("experience");
-            } else if (entry.target === projectRef.current) {
-              setActiveSection("projects");
-            }
-          }
-        });
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.8,
-      }
-    );
+    lenis.on("scroll", ScrollTrigger.update);
 
-    if (aboutRef.current) {
-      observer.observe(aboutRef.current);
-      aboutRefValue = aboutRef.current;
-    }
-    if (experienceRef.current) {
-      observer.observe(experienceRef.current);
-      experienceRefValue = experienceRef.current;
-    }
-    if (projectRef.current) {
-      observer.observe(projectRef.current);
-      projectRefValue = projectRef.current;
-    }
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
+
+    sections.forEach((section) => {
+      ScrollTrigger.create({
+        trigger: `#${section.id}`,
+        start: `${section.start}`,
+        end: `${section.end}`,
+        scrub: true,
+        onEnter: () => setActiveSection(section.id),
+        onEnterBack: () => setActiveSection(section.id),
+      });
+    });
 
     return () => {
-      if (aboutRefValue) observer.unobserve(aboutRefValue);
-      if (experienceRefValue) observer.unobserve(experienceRefValue);
-      if (projectRefValue) observer.unobserve(projectRefValue);
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 
